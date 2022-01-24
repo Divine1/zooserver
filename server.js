@@ -43,9 +43,16 @@ app.post("/sendMessage",(req,res)=>{
 
     console.log("reqBody ",reqBody);
     console.log("USER_SUBSCRIPTIONS length ",USER_SUBSCRIPTIONS.length);
-    
+    const notificationPayload = {
+        "data": {
+            "name" : "divine",
+            "city" : "madurai"
+        }
+    }
+    /*
     const notificationPayload = {
         "notification": {
+            "silent" : "true",
           "title": "New Notification!",
           "body" : "News latest breaking story",
           "actions": [
@@ -66,6 +73,7 @@ app.post("/sendMessage",(req,res)=>{
           }
         }
       }
+      */
       
      /*
       const notificationPayload = {
